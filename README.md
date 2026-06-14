@@ -4,7 +4,7 @@
 
 > **"The x^d = x + 1 Hierarchy: Cross-Dimensional Spectral Validation on A_d Root Lattices"**
 > Casey Lee Race, Calera Computing, Inc.
-> [DOI: 10.5281/zenodo.XXXXXXXX](https://doi.org/10.5281/zenodo.XXXXXXXX) *(Zenodo preprint, 2026)*
+> [DOI: 10.5281/zenodo.20692936](https://doi.org/10.5281/zenodo.20692936) *(Zenodo preprint, 2026)*
 
 This repository contains the clean-room verification suite that reproduces **every numerical claim** in the paper using **zero external dependencies**.
 
@@ -93,6 +93,6 @@ If you use this verification suite in your work, please cite the paper:
                   Validation on $A_d$ Root Lattices},
   year         = {2026},
   howpublished = {Zenodo preprint},
-  note         = {DOI: 10.5281/zenodo.XXXXXXXX}
+  note         = {DOI: 10.5281/zenodo.20692936}
 }
 ```
