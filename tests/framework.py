@@ -17,8 +17,17 @@ import sys
 
 # ─── Constants ────────────────────────────────────────────────────────────────
 PHI   = (1 + math.sqrt(5)) / 2                    # golden ratio, root of x²=x+1
-RHO   = 1.32471795724474602596                     # plastic constant, root of x³=x+1
-SIGMA = 1.22074408460575947536                     # σ-constant, root of x⁴=x+1
+
+# Exact closed form for plastic constant (x³=x+1) via Cardano
+_rho_a = 1/2 + math.sqrt(69)/18
+_rho_b = 1/2 - math.sqrt(69)/18
+RHO = _rho_a**(1/3) + (_rho_b**(1/3) if _rho_b >= 0 else -(-_rho_b)**(1/3))
+
+# Exact closed form for σ-constant (x⁴=x+1) via Ferrari's resolvent cubic y³+4y-1=0
+_sig_c = 1/2 + math.sqrt(283/108)
+_sig_d = 1/2 - math.sqrt(283/108)
+_sig_P = _sig_c**(1/3) + (_sig_d**(1/3) if _sig_d >= 0 else -(-_sig_d)**(1/3))
+SIGMA = 1/2 * math.sqrt(_sig_P) + 1/2 * math.sqrt(2/math.sqrt(_sig_P) - _sig_P)
 LN2   = math.log(2)
 
 
